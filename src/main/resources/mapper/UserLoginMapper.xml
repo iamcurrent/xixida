@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.pro1.demo.sqlcontrol.MySqlController">
+    <select id="queryAll" resultType="com.example.pro1.demo.entity.UserInfo">
+        select * from user
+    </select>
+
+    <insert id="add" parameterType="com.example.pro1.demo.entity.UserInfo">
+        insert into user values (#{username},#{password})
+    </insert>
+
+    <select id="queryByName" resultType="com.example.pro1.demo.entity.UserInfo">
+        select * from user where username=#{username}
+    </select>
+</mapper>
