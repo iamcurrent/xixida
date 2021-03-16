@@ -16,4 +16,6 @@ public interface MySqlController {
     //根据用户名查询数据
     public UserInfo queryByName(String username);
 
+
+
 }
